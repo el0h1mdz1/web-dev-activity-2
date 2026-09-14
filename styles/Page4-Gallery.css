@@ -1,0 +1,436 @@
+
+   /* GENERAL */
+
+body {
+
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #f5f5f5;
+
+    color: #222222;
+
+}
+
+
+/* HEADER */
+/* This is the same header style your friend made */
+
+.header {
+
+    height: 120px;
+
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    right: 0;
+
+    z-index: 100;
+
+    background-color: rgb(89, 62, 2);
+
+    border-bottom-width: 1px;
+
+    border-bottom-style: solid;
+
+    border-bottom-color: rgb(228, 228, 228);
+
+    background-image: url('/Photos/header-image.jpg');
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+
+    background-size: 100% 120px;
+
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+
+.left-section {
+
+    display: flex;
+
+}
+
+
+.logo-container {
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.main-logo {
+
+    height: 100px;
+
+    padding: 20px 25px;
+
+    border-radius: 50%;
+
+    width: 100px;
+
+}
+
+
+.right-section {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    width: 1050px;
+
+}
+
+
+.home-button,
+.menu-button,
+.location-button,
+.about-button,
+.contact-button {
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    color: white;
+
+    margin-left: 0px;
+
+    margin-right: 50px;
+
+    padding: 20px 20px;
+
+    border-radius: 40px;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+}
+
+
+.header-link {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+/* GALLERY HERO */
+
+.gallery-placeholder {
+
+    margin-top: 120px;
+
+    height: 300px;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+/* HERO IMAGE */
+
+.gallery-placeholder img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+/* DARK OVERLAY */
+
+.gallery-placeholder::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.55);
+
+}
+
+
+/* HERO TEXT */
+
+.gallery-text {
+
+    position: absolute;
+
+    z-index: 1;
+
+    top: 0;
+
+    left: 8%;
+
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    color: white;
+
+}
+
+
+/* GALLERY TITLE */
+
+.gallery-text h1 {
+
+    font-family: Georgia, serif;
+
+    font-size: 60px;
+
+    margin: 0 0 10px 0;
+
+}
+
+
+/* GALLERY DESCRIPTION */
+
+.gallery-text p {
+
+    font-family: Georgia, serif;
+
+    font-size: 20px;
+
+    line-height: 1.5;
+
+    max-width: 600px;
+
+    margin: 0;
+
+}
+
+
+/* GALLERY SECTION */
+
+.gallery-section {
+
+    padding: 50px 5%;
+
+    background-color: #f5f5f5;
+
+}
+
+
+/* GALLERY CONTAINER */
+
+.gallery-container {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 40px 25px;
+
+}
+
+
+/* GALLERY ITEM */
+
+.gallery-item {
+
+    background-color: transparent;
+
+}
+
+
+/* GALLERY IMAGE */
+
+.gallery-item img {
+
+    width: 100%;
+
+    height: 250px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 5px;
+
+    transition: 0.3s;
+
+}
+
+
+/* IMAGE HOVER */
+
+.gallery-item img:hover {
+
+    transform: scale(1.02);
+
+}
+
+
+/* IMAGE TITLE */
+
+.gallery-item h2 {
+
+    font-family: Georgia, serif;
+
+    font-size: 21px;
+
+    margin: 15px 0 7px 0;
+
+}
+
+
+/* IMAGE DESCRIPTION */
+
+.gallery-item p {
+
+    color: #555555;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+
+    margin: 0;
+
+}
+
+
+/* FOOTER */
+
+footer {
+
+    background-color: #222222;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px;
+
+    margin-top: 20px;
+
+}
+
+
+footer p {
+
+    margin: 8px;
+
+}
+
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+
+    .gallery-container {
+
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+}
+
+
+/* SMALL TABLET */
+
+@media (max-width: 750px) {
+
+    .gallery-container {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    .gallery-text h1 {
+        font-size: 45px;
+
+    }
+
+
+    .gallery-text p {
+        font-size: 18px;
+
+    }
+
+}
+
+
+/* PHONE */
+
+@media (max-width: 500px) {
+
+    .gallery-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .gallery-section {
+
+        padding: 35px 7%;
+
+    }
+
+
+    .gallery-placeholder {
+
+        height: 250px;
+
+    }
+
+    .gallery-text {
+        left: 7%;
+        right: 7%;
+
+    }
+
+    .gallery-text h1 {
+        font-size: 38px;
+
+    }
+
+    .gallery-text p {
+        font-size: 16px;
+
+    }
+
+}
