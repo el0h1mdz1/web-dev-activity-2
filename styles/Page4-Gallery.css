@@ -1,0 +1,193 @@
+body {
+
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #222222;
+}
+
+.gallery-placeholder{
+
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-placeholder::after {
+
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.55);
+
+}
+
+.gallery-hero p {
+    
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 8%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.gallery-section {
+
+    padding: 50px 5%;
+    background-color: #f5f5f5;
+}
+
+.gallery-container {
+    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px 25px;
+
+}
+
+.gallery-item {
+
+    background-color: transparent;
+
+}
+
+
+
+.gallery-item img {
+
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    border-radius: 5px;
+
+}
+
+
+/* IMAGE TITLE */
+
+.gallery-item h2 {
+
+    font-family: Georgia, serif;
+    font-size: 21px;
+    margin: 15px 0 7px 0;
+
+}
+
+
+/* IMAGE DESCRIPTION */
+
+.gallery-item p {
+
+    color: #555555;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0;
+
+}
+
+
+/* HOVER EFFECT */
+
+.gallery-item img {
+
+    transition: 0.3s;
+
+}
+
+
+.gallery-item img:hover {
+
+    transform: scale(1.02);
+
+}
+
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+
+    .gallery-container {
+
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+}
+
+
+/* SMALL TABLET */
+
+@media (max-width: 750px) {
+
+    .gallery-container {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .gallery-hero-text h1 {
+
+        font-size: 45px;
+
+    }
+
+}
+
+
+/* PHONE */
+
+@media (max-width: 500px) {
+
+    .gallery-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .gallery-section {
+
+        padding: 35px 7%;
+
+    }
+
+    .gallery-hero {
+
+        height: 250px;
+
+    }
+
+    .gallery-hero-text {
+
+        left: 7%;
+        right: 7%;
+
+    }
+
+    .gallery-hero-text h1 {
+
+        font-size: 38px;
+
+    }
+
+    .gallery-hero-text p {
+
+        font-size: 16px;
+
+    }
+
+}
